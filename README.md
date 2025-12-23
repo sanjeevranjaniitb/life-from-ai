@@ -1,5 +1,4 @@
-# Bhagwat Gita Narrator
-
+# Life Through AI
 This project generates a video narration of the Bhagwat Gita using an AI avatar (Lord Krishna) that lip-syncs to the text.
 
 ## Prerequisites
