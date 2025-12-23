@@ -1,0 +1,26 @@
+venv/
+__pycache__/
+*.pyc
+.idea/
+.DS_Store
+.qodo/
+
+# Generated Outputs
+outputs/
+output_audio.mp3
+output_video.mp4
+chunk_*.mp3
+chunks.txt
+
+# Temp files
+temp/
+*.wav
+*.avi
+
+# Wav2Lip
+Wav2Lip/checkpoints/
+Wav2Lip/face_detection/detection/sfd/s3fd.pth
+
+# Demo Assets
+gita_demo.pdf
+gita_demo_hindi.pdf

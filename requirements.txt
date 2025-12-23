@@ -1,0 +1,12 @@
+pdfplumber
+edge-tts
+tqdm
+reportlab
+Pillow
+librosa
+opencv-python
+torch
+torchvision
+numpy
+scipy
+requests
