@@ -1,59 +1,42 @@
-# Life Through AI
-This project generates a video narration of the Bhagwat Gita using an AI avatar (Lord Krishna) that lip-syncs to the text.
+# Knowledge To Life
+
+Turn your static PDF documents into an interactive, talking AI avatar. This application allows you to upload a document, ask questions, and receive answers delivered by a realistic, lip-synced digital persona.
+
+## Features
+*   **Offline RAG**: Securely processes documents on your local machine using LangChain and FAISS.
+*   **AI Video Generation**: Uses Wav2Lip to animate any static face image to speak the AI's response.
+*   **Custom Avatars**: Upload your own image to be the face of your knowledge base.
+*   **Neural TTS**: High-quality voice synthesis using Edge-TTS.
 
 ## Prerequisites
-
-1.  **Python 3.8+**
-2.  **FFmpeg**: `brew install ffmpeg`
-3.  **Wav2Lip**: Required for realistic lip-syncing.
-
-## Setup
-
-1.  **Create Environment**:
+*   **Python 3.10** (Recommended)
+*   **FFmpeg**: Required for video processing.
     ```bash
-    conda create -n gita_env python=3.10 -y
-    conda activate gita_env
+    brew install ffmpeg
     ```
 
-2.  **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Installation
 
-3.  **Setup Wav2Lip**:
-    Run the setup script. This will automatically download the required models.
+1.  **Run the Setup Script**:
+    This will install all necessary Python dependencies and fix potential environment conflicts.
     ```bash
-    chmod +x setup_wav2lip.sh
-    ./setup_wav2lip.sh
+    chmod +x setup.sh
+    ./setup.sh
     ```
-
-4.  **Add Assets**:
-    *   **PDF**: Place your `gita.pdf` in the root folder.
-    *   **Image**: Place a high-quality image of Lord Krishna at `assets/krishna.jpg`.
 
 ## Usage
 
-### Run Demo (English & Hindi)
-This single script generates both demos and saves them to the `outputs/` folder.
-
-```bash
-chmod +x demo.sh
-./demo.sh
-```
-
-### Run Manually
-To narrate a specific chapter from your own PDF:
-
-```bash
-python main.py --pdf_path gita.pdf --lang en --chapter 1 --output outputs/my_video.mp4
-```
-
-*   `--pdf_path`: Path to the PDF file.
-*   `--lang`: Language (`en` for English, `hi` for Hindi).
-*   `--chapter`: Specific chapter number.
-*   `--output`: Output video filename.
+1.  **Start the Application**:
+    ```bash
+    ./run_chat.sh
+    ```
+2.  **Upload Knowledge**: Use the sidebar to upload a PDF document.
+3.  **Choose Avatar**: Upload your own photo or use the default.
+4.  **Chat**: Ask a question in the chat box. The AI will generate a text response immediately, followed by a video response.
 
 ## Troubleshooting
+*   **Video Generation is Slow**: This is expected on CPU. The system prioritizes quality and stability over real-time rendering.
+*   **Installation Errors**: Ensure you have a clean Python 3.10 environment and run `./setup.sh`.
 
-*   **Wav2Lip Errors**: Ensure you are using Python 3.10 and have run `setup_wav2lip.sh` successfully.
-*   **Face Detection**: Ensure the `krishna.jpg` has a clear, frontal face.
+## License
+MIT

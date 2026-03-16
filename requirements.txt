@@ -1,12 +1,26 @@
+# Core Application
+streamlit
 pdfplumber
-edge-tts
-tqdm
-reportlab
-Pillow
-librosa
-opencv-python
-torch
-torchvision
-numpy
-scipy
 requests
+opencv-python
+numpy==1.26.4
+tqdm
+
+# RAG / LLM Stack
+langchain==0.2.5
+langchain-community==0.2.5
+langchain-core==0.2.9
+langchain-huggingface==0.0.3
+faiss-cpu
+sentence-transformers==2.7.0
+transformers==4.41.2
+accelerate
+torch==2.2.2
+torchvision==0.17.2
+
+# Audio Processing
+edge-tts
+pydub
+simpleaudio
+scipy
+librosa==0.9.2
